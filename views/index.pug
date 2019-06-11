@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	- var massive = ["ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"]
+	div
+		each word in array
+			if word.num=== 1
+				span= massive[1] + " " + word.name
+					br
+			else if word.num > 1
+				if word.num < 5
+					span= massive[word.num] + " " + word.name + "а"
+						br
+			else
+				span= massive[word.num] + " " + word.name + "ов"
+					br
